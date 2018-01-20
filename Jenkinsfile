@@ -23,10 +23,10 @@ node('php'){
         )
     }
     stage('Docker Build') {
-        sh 'docker build -t edupotato/api-1:$BUILD_NUMBER .'
+        sh 'docker build -t edubarros/api:$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
-        sh 'docker push edupotato/api-1:$BUILD_NUMBER'
+        sh 'docker push edubarros/api:$BUILD_NUMBER'
     }
 }
